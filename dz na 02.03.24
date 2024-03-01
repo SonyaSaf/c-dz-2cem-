@@ -25,5 +25,131 @@ int main()
     }
 
     return 0;
+
+
+3.
+#include <iostream>
+using namespace std;
+int main()
+{
+    long int b = 7435421243;
+    int kilob = b/1024;
+    int megab = kilob/1024;
+    int gigab = megab/1024;
+    cout << "килобайт: " << kilob << endl;
+    cout << "мегабайт: " << megab << endl;
+    cout << "гигабайт: " << gigab << endl;
+    return 0;
 }
+
+
+4. 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    cout << "Введите число" << endl;
+    cin >> a;
+    int s = 0;
+    while (a!=0){
+        int h = a%10;
+        a = a/10;
+        s = s+h;
+    }
+    cout << "сумма цифр: " << s << endl;
+    return 0;
+}
+
+
+5. 
+#include <iostream>
+using namespace std;
+int main()
+{
+    double a, s;
+    cout << "Введите число" << endl;
+    cin >> a;
+    s = a*10/100;
+    cout << "10%: " << s << endl;
+    return 0;
+}
+
+
+6.
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a = 0;
+    for (int i = 1; i <= 100; i++){
+        a += i*i;
+    }
+    cout << a;
+    return 0;
+}
+
+
+7.
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    string slov1 = "hello", slov2 = "odel";
+    if (slov1[slov1.length() - 1]==slov2[0]){
+        cout << "последняя буква первого слова совпадает с первой буквой второго слова";
+    }
+    else{
+        cout << "последняя буква первого слова не совпадает с первой буквой второго слова";
+    }
+    
+    return 0;
+}
+
+
+8.
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    int chas,min,sec = 0;
+    int sut = 10;
+    chas = sut*24;
+    min = chas*60;
+    sec = min*60;
+    cout << "в 10 сутках содержится " << sec << " cекунд";
+    return 0;
+}
+
+
+9.
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    for (int i=-100; i<=100; i++){
+        cout << i << endl;
+    }
+    return 0;
+}
+
+
+10.
+#include <iostream>
+using namespace std;
+int main()
+{
+    char chr1 = '1'; 
+    char chr2 = '2'; 
+    char chr3 = '3'; 
+    char chr4 = '4'; 
+    char chr5 = '5'; 
+    int y = (chr1-'0')*10000+(chr2-'0')*1000+(chr3-'0')*100+(chr4-'0')*10+(chr5-'0')*1;
+    cout << y;
+    return 0;
+}
+
 
